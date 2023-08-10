@@ -1,0 +1,11 @@
+# Ignore virtual environment
+myvenv2/
+
+# Ignore fine-tuned model
+fine_tuned_model/
+
+# Ignore output files
+output/
+
+# Ignore log files
+logs/
