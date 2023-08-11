@@ -41,14 +41,20 @@ def main():
         # Add more examples here...
     ]
     model_path = "./fine_tuned_model"  # Path to the directory where your trained model is saved
+    with open("prompts_trainedResponses_and_desiredOutputs.txt", "w") as output_file:
 
-    for example in combined_dataset:
-        prompt = example["prompt"]
-        desired_output = example["desired_output"]
-        print("prompt:", prompt)
-        response = generate_response(prompt, model_path)
-        print("trained response:", response)
-        print("desired output:", desired_output)
+        for example in combined_dataset:
+            prompt = example["prompt"]
+            desired_output = example["desired_output"]
+            response = generate_response(prompt, model_path)
+            print("prompt:", prompt)
+            print("trained response:", response)
+            print("desired output:", desired_output)
+
+            output_file.write(f"Prompt: {prompt}\n")
+            output_file.write(f"Trained Response: {response}\n")
+            output_file.write(f"Desired Output: {desired_output}\n")
+            output_file.write("\n")  # Add a line break between entries
 
 
 if __name__ == "__main__":
