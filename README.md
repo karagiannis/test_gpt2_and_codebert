@@ -31,7 +31,6 @@ the default values when questioned. Paste the public ssh key into your account p
 'Change SSH Key'.
 Choose template 'cuda:12.0.1-devel-ubuntu20.04' for cuda support and rent a computer
 when directed to the 'Search' page.
-
 It takes a couple of minutes for the enviroment to be set up and when it is done
 you are given the option of logging in via ssh or ssh via proxy.
 Choose ssh without proxy if you do not know what you are doing.
