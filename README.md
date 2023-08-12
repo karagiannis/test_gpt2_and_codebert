@@ -40,12 +40,12 @@ ssh -p <remote port> root@<remote IP-adress> -L <your port number>:localhost:<th
 ```
 It can look like this: 
 ```sh 
-ssh -p 40170 root@198.16.187.151 -L 8080:localhost:8080'
+s   sh -p 40170 root@198.16.187.151 -L 8080:localhost:8080'
 ```
 which means connecting from client port 8080 to the remote hosts port 40170 
 which is set to be forwarded to their port 8080. Effectively communication
 is done via ports 8080 on both sides.
-Upload your files with command
+U   pload your files with command
 ```sh
 scp -P <their remote port> <path to your file> root@<their IP adress>:/root/
 ```
@@ -62,10 +62,11 @@ scp -P <their port number> root@<their IP adress>:<file path remote computer>
 It can look like this:
 ```sh 
 scp -P 40170 root@198.16.187.151:/root/trainer_gpt2.py ~/Desktop/
-`´`
+```
 Install pip3 and then continue to install dependencies that python3 
 is asking for. To install `pip3`, you can use the package manager for your system.
 For example, on Debian-based systems, you can run:
+
 ```sh
 sudo apt-get update
 sudo apt-get install python3-pip
