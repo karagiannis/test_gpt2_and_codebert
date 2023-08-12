@@ -46,12 +46,10 @@ Your upload is placed in the remote root folder.
 To retrieve files one simple change the scp command like this
 scp -P <their port number> root@<their IP adress>:<search path to your file on the remote computer> 
 <path on your local computer>
-In my case I gave 'scp -P 40170 root@198.16.187.151:/root/trainer_gpt2.py ~/Desktop/
-'
+In my case I gave 'scp -P 40170 root@198.16.187.151:/root/trainer_gpt2.py ~/Desktop/'
 Install pip3 and then continue to install dependencies that python3 
 is asking for. To install `pip3`, you can use the package manager for your system.
 For example, on Debian-based systems, you can run:
-
 ```sh
 sudo apt-get update
 sudo apt-get install python3-pip
