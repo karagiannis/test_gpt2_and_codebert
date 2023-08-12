@@ -34,19 +34,35 @@ when directed to the 'Search' page.
 It takes a couple of minutes for the enviroment to be set up and when it is done
 you are given the option of logging in via ssh or ssh via proxy.
 Choose ssh without proxy if you do not know what you are doing.
-The command given is
-'ssh -p <remote port> root@<remote IP-adress> -L <your port number>:localhost:<their port number'>
-In my case I was given 'ssh -p 40170 root@198.16.187.151 -L 8080:localhost:8080'
+The command given is 
+```sh
+ssh -p <remote port> root@<remote IP-adress> -L <your port number>:localhost:<their port number'>
+```
+It can look like this: 
+```sh 
+ssh -p 40170 root@198.16.187.151 -L 8080:localhost:8080'
+```
 which means connecting from client port 8080 to the remote hosts port 40170 
 which is set to be forwarded to their port 8080. Effectively communication
 is done via ports 8080 on both sides.
-Upload your files with command 'scp -P <their remote port> <path to your file> root@<their IP adress>:/root/
-In my case it was 'scp -P 40170 trainer_gpt2.py root@198.16.187.151:/root/'
+Upload your files with command
+```sh
+scp -P <their remote port> <path to your file> root@<their IP adress>:/root/
+```
+It can look like this:
+```sh
+scp -P 40170 trainer_gpt2.py root@198.16.187.151:/root/'
+```
 Your upload is placed in the remote root folder.
 To retrieve files one simple change the scp command like this
-scp -P <their port number> root@<their IP adress>:<search path to your file on the remote computer> 
-<path on your local computer>
-In my case I gave 'scp -P 40170 root@198.16.187.151:/root/trainer_gpt2.py ~/Desktop/'
+```sh
+scp -P <their port number> root@<their IP adress>:<file path remote computer> 
+<folder path local computer>
+```
+It can look like this:
+```sh 
+scp -P 40170 root@198.16.187.151:/root/trainer_gpt2.py ~/Desktop/
+`´`
 Install pip3 and then continue to install dependencies that python3 
 is asking for. To install `pip3`, you can use the package manager for your system.
 For example, on Debian-based systems, you can run:
