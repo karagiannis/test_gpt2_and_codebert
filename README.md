@@ -45,7 +45,7 @@ s   sh -p 40170 root@198.16.187.151 -L 8080:localhost:8080'
 which means connecting from client port 8080 to the remote hosts port 40170 
 which is set to be forwarded to their port 8080. Effectively communication
 is done via ports 8080 on both sides.
-U   pload your files with command
+Upload your files with command
 ```sh
 scp -P <their remote port> <path to your file> root@<their IP adress>:/root/
 ```
